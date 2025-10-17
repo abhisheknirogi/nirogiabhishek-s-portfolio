@@ -53,7 +53,7 @@ This repository contains the **HTML, CSS, and assets** used for my personal port
 
 ## License
 
-This project is for **personal and educational purposes**. Feel free to explore, but please do not copy without permission.
+This project is for **personal and educational purposes**. Feel free to explore, copy it but just send me a message in any form so that I feel good regarding it.
 
 ---
 
