@@ -108,6 +108,17 @@ h2::after {
   color: #fff;
   box-shadow: 0 0 15px #3b82f6;
 }
+.skill.learning {
+  border: 1px dashed rgba(59,130,246,0.5);
+  background: rgba(30,30,46,0.3);
+  color: #a5b4fc;
+}
+.skill.learning:hover {
+  transform: scale(1.1);
+  background: rgba(59,130,246,0.5);
+  color: #fff;
+  box-shadow: 0 0 15px #3b82f6;
+}
 
 /* Education */
 .edu-card {
