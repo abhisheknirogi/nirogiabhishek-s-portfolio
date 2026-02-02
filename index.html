@@ -12,8 +12,11 @@
 
   <!-- Navigation -->
   <nav class="navbar">
-    <div class="container">
-      <ul>
+    <div class="container navbar-container">
+      <div class="logo">
+        <a href="#about" class="logo-text">AN</a>
+      </div>
+      <ul class="nav-menu" id="navMenu">
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#education">Education</a></li>
@@ -21,46 +24,274 @@
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
   </nav>
 
   <!-- Hero -->
   <header class="hero">
     <div class="container hero-content fade-in">
-      <h1>Abhishek Nirogi</h1>
-      <p>BCA (AI & ML) Student @ Akash Group of Institutions</p>
-      <h3>AI/ML • Web Development • Problem Solving</h3>
+      <h1 class="typing-text">Abhishek Nirogi</h1>
+      <p class="hero-subtitle">BCA (AI & ML) Student @ Akash Group of Institutions</p>
+      <h3 class="hero-tagline"> AI/ML • Web Development • Problem Solving</h3>
+      <div class="hero-buttons">
+        <a href="#projects" class="btn btn-primary">View My Work</a>
+        <a href="#contact" class="btn btn-secondary">Let's Connect</a>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span>Scroll to explore</span>
+      <div class="scroll-arrow">↓</div>
     </div>
   </header>
 
   <!-- About -->
-  <section id="about" class="fade-in">
+  <section id="about" class="fade-in about-section">
     <div class="container">
       <h2>About Me</h2>
-      <p>Hi, I’m <strong>Abhishek</strong> — a student developer skilled in <b>Python, HTML5, CSS3, Git & GitHub, UI/UX design, and Machine Learning</b>. I’m also currently learning <b>Django, Tailwind CSS, React, and MongoDB</b> to build modern, full-stack web applications. I’m passionate about creating intelligent, creative, and user-friendly digital products. I’m currently pursuing <b>BCA (AI & ML specialization)</b> at Akash Group of Institutions, Bengaluru.</p>
-      <p>My interests include web development, UI/UX design, and exploring how AI and machine learning can simplify everyday tasks and solve real-world problems.</p>
+      <div class="about-content">
+        <p>Hi, I'm <strong>Abhishek</strong> — a passionate student developer skilled in <b>Python, HTML5, CSS3, Git & GitHub, UI/UX design, and Machine Learning</b>. I'm also currently learning <b>Django, Tailwind CSS, React, and MongoDB</b> to build modern, full-stack web applications. I'm passionate about creating intelligent, creative, and user-friendly digital products. I'm currently pursuing <b>BCA (AI & ML specialization)</b> at Akash Group of Institutions, Bengaluru.</p>
+        <p>My interests include web development, UI/UX design, and exploring how AI and machine learning can simplify everyday tasks and solve real-world problems. I believe in continuous learning and staying updated with the latest technologies.</p>
+      </div>
     </div>
   </section>
 
   <!-- Skills -->
   <section id="skills" class="fade-in">
     <div class="container">
-      <h2>Skills</h2>
-      <div class="skills-grid">
-        <div class="skill">Python</div>
-        <div class="skill">HTML5</div>
-        <div class="skill">CSS3</div>
-        <div class="skill">Git & GitHub</div>
-        <div class="skill">UI/UX Principles</div>
-        <div class="skill">Figma</div>
-        <div class="skill">Canvas</div>
-         <div class="skill">React </div>
-        <div class="skill ">MongoDB </div>
-        <div class="skill ">Tailwind CSS </div>
-        <div class="skill learning">Machine Learning(learning)</div>
-        <div class="skill learning">Django (Learning)</div>
-        
-       
+      <h2>Skills & Expertise</h2>
+      <p style="text-align: center; color: #a5b4fc; margin-bottom: 40px;">Here's what I can bring to your team</p>
+      
+      <!-- Programming Languages -->
+      <div class="skill-category">
+        <h3 class="category-title"> Programming Languages</h3>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <div class="skill-name">Python</div>
+            <div class="proficiency">
+              <div class="proficiency-bar">
+                <div class="proficiency-fill" style="width: 90%"></div>
+              </div>
+              <span class="proficiency-text">Advanced</span>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-name">JavaScript</div>
+            <div class="proficiency">
+              <div class="proficiency-bar">
+                <div class="proficiency-fill" style="width: 90%"></div>
+              </div>
+              <span class="proficiency-text">Advanced</span>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-name">HTML5</div>
+            <div class="proficiency">
+              <div class="proficiency-bar">
+                <div class="proficiency-fill" style="width: 90%"></div>
+              </div>
+              <span class="proficiency-text">Advanced</span>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-name">CSS3</div>
+            <div class="proficiency">
+              <div class="proficiency-bar">
+                <div class="proficiency-fill" style="width: 90%"></div>
+              </div>
+              <span class="proficiency-text">Advanced</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Frontend Development -->
+      <div class="skill-category">
+        <h3 class="category-title">Frontend Development</h3>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <div class="skill-name">React</div>
+            <div class="proficiency">
+              <div class="proficiency-bar">
+                <div class="proficiency-fill" style="width: 90%"></div>
+              </div>
+              <span class="proficiency-text">Advanced</span>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-name">Tailwind CSS</div>
+            <div class="proficiency">
+              <div class="proficiency-bar">
+                <div class="proficiency-fill" style="width: 78%"></div>
+              </div>
+              <span class="proficiency-text">Intermediate</span>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-name">Responsive Design</div>
+            <div class="proficiency">
+              <div class="proficiency-bar">
+                <div class="proficiency-fill" style="width: 90%"></div>
+              </div>
+              <span class="proficiency-text">Advanced</span>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-name">Canvas / Animation</div>
+            <div class="proficiency">
+              <div class="proficiency-bar">
+                <div class="proficiency-fill" style="width: 90%"></div>
+              </div>
+              <span class="proficiency-text">Advanced</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Backend & Databases -->
+      <div class="skill-category">
+        <h3 class="category-title"> Backend & Databases</h3>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <div class="skill-name">Django</div>
+            <div class="proficiency">
+              <div class="proficiency-bar">
+                <div class="proficiency-fill" style="width: 65%"></div>
+              </div>
+              <span class="proficiency-text">Learning</span>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-name">MongoDB</div>
+            <div class="proficiency">
+              <div class="proficiency-bar">
+                <div class="proficiency-fill" style="width: 75%"></div>
+              </div>
+              <span class="proficiency-text">Intermediate</span>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-name">RESTful APIs</div>
+            <div class="proficiency">
+              <div class="proficiency-bar">
+                <div class="proficiency-fill" style="width: 72%"></div>
+              </div>
+              <span class="proficiency-text">Learning</span>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-name">Full-Stack Development</div>
+            <div class="proficiency">
+              <div class="proficiency-bar">
+                <div class="proficiency-fill" style="width: 70%"></div>
+              </div>
+              <span class="proficiency-text">Intermediate</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- AI & Machine Learning -->
+      <div class="skill-category">
+        <h3 class="category-title"> AI & Machine Learning</h3>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <div class="skill-name">Machine Learning</div>
+            <div class="proficiency">
+              <div class="proficiency-bar">
+                <div class="proficiency-fill" style="width: 70%"></div>
+              </div>
+              <span class="proficiency-text">Learning</span>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-name">Data Analysis</div>
+            <div class="proficiency">
+              <div class="proficiency-bar">
+                <div class="proficiency-fill" style="width: 75%"></div>
+              </div>
+              <span class="proficiency-text">Learning</span>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-name">Problem Solving</div>
+            <div class="proficiency">
+              <div class="proficiency-bar">
+                <div class="proficiency-fill" style="width: 82%"></div>
+              </div>
+              <span class="proficiency-text">Advanced</span>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-name">AI/ML Projects</div>
+            <div class="proficiency">
+              <div class="proficiency-bar">
+                <div class="proficiency-fill" style="width: 70%"></div>
+              </div>
+              <span class="proficiency-text">Intermediate</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Design & Tools -->
+      <div class="skill-category">
+        <h3 class="category-title"> Design & Tools</h3>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <div class="skill-name">Figma</div>
+            <div class="proficiency">
+              <div class="proficiency-bar">
+                <div class="proficiency-fill" style="width: 80%"></div>
+              </div>
+              <span class="proficiency-text">Advanced</span>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-name">UI/UX Principles</div>
+            <div class="proficiency">
+              <div class="proficiency-bar">
+                <div class="proficiency-fill" style="width: 82%"></div>
+              </div>
+              <span class="proficiency-text">Advanced</span>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-name">Git & GitHub</div>
+            <div class="proficiency">
+              <div class="proficiency-bar">
+                <div class="proficiency-fill" style="width: 85%"></div>
+              </div>
+              <span class="proficiency-text">Advanced</span>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-name">Web Performance</div>
+            <div class="proficiency">
+              <div class="proficiency-bar">
+                <div class="proficiency-fill" style="width: 75%"></div>
+              </div>
+              <span class="proficiency-text">Intermediate</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Soft Skills -->
+      <div class="skill-category">
+        <h3 class="category-title">Soft Skills</h3>
+        <div class="soft-skills-grid">
+          <div class="soft-skill">Communication</div>
+          <div class="soft-skill">Team Collaboration</div>
+          <div class="soft-skill">Critical Thinking</div>
+          <div class="soft-skill">Creativity</div>
+          <div class="soft-skill">Quick Learner</div>
+          <div class="soft-skill">Attention to Detail</div>
+        </div>
       </div>
     </div>
   </section>
@@ -148,10 +379,38 @@
 
   <!-- Footer -->
   <footer class="fade-in">
-    <p>&copy; 2025 Abhishek Nirogi | Built with HTML & CSS | Akash Group of Institutions</p>
+    <p>&copy; 2025 Abhishek Nirogi | Built with HTML & CSS </p>
   </footer>
 
   <script>
+    // Hamburger Menu Toggle
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('navMenu');
+
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+      hamburger.classList.toggle('active');
+    });
+
+    // Close menu when link is clicked
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+        hamburger.classList.remove('active');
+      });
+    });
+
+    // Scroll effect on navbar
+    window.addEventListener('scroll', () => {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    // Smooth scroll on page load
     window.onbeforeunload = function () {
       window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
     }
