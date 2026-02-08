@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Abhishek Nirogi - Full-Stack Developer | React • Vue • Node.js • AI/ML">
+  <meta name="author" content="Abhishek Nirogi">
+  <meta property="og:title" content="Abhishek Nirogi - Full-Stack Developer Portfolio">
+  <meta property="og:description" content="Modern portfolio showcasing React, Vue, Tailwind CSS, and full-stack development skills">
+  <meta property="og:image" content="https://via.placeholder.com/1200x630?text=Abhishek+Nirogi+Portfolio">
+  
+  <title>Abhishek Nirogi - Full-Stack Developer | React • Vue • Node.js</title>
+  
+  <!-- Tailwind CSS CDN (Fastest way to get started) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- Custom Styles -->
+  <style>
+    * {
+      scrollbar-width: thin;
+      scrollbar-color: #3b82f6 transparent;
+    }
+    
+    *::-webkit-scrollbar {
+      width: 8px;
+    }
+    
+    *::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    
+    *::-webkit-scrollbar-thumb {
+      background-color: #3b82f6;
+      border-radius: 4px;
+    }
+    
+    *::-webkit-scrollbar-thumb:hover {
+      background-color: #2563eb;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #0a0a12 0%, #0f0f1e 50%, #1a1a2e 100%);
+      background-attachment: fixed;
+      overflow-x: hidden;
+    }
+    
+    /* Animated background orbs */
+    @keyframes float {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(30px) rotate(180deg); }
+    }
+    
+    @keyframes glow {
+      0%, 100% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.3), 0 0 40px rgba(59, 130, 246, 0.1); }
+      50% { box-shadow: 0 0 30px rgba(59, 130, 246, 0.6), 0 0 60px rgba(59, 130, 246, 0.3); }
+    }
+    
+    @keyframes slideInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    @keyframes slideInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+    .animate-float { animation: float 6s ease-in-out infinite; }
+    .animate-glow { animation: glow 2s ease-in-out infinite; }
+    .animate-slide-in-down { animation: slideInDown 0.8s ease forwards; }
+    .animate-slide-in-up { animation: slideInUp 0.8s ease forwards; }
+    .animate-fade-in { animation: fadeIn 1s ease forwards; }
+    
+    /* Glassmorphism */
+    .glass {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .glass-dark {
+      background: rgba(30, 30, 46, 0.6);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(59, 130, 246, 0.3);
+    }
+    
+    /* Gradient text */
+    .text-gradient {
+      background: linear-gradient(135deg, #60a5fa, #3b82f6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    /* Hover effects */
+    .hover-lift:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(59, 130, 246, 0.3);
+    }
+    
+    .skill-bar {
+      position: relative;
+      height: 8px;
+      background: rgba(59, 130, 246, 0.2);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    
+    .skill-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #3b82f6, #60a5fa);
+      border-radius: 10px;
+      transition: width 1.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    
+    /* Stagger animation */
+    @keyframes stagger {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    
+    .stagger-item {
+      animation: stagger 0.6s ease forwards;
+    }
+    
+    .scroll-indicator {
+      animation: bounce 2s infinite;
+    }
+    
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(10px); }
+    }
+  </style>
+</head>
+<body class="text-gray-100">
+  
+  <!-- Animated background -->
+  <div class="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
+    <div class="absolute top-0 left-20 w-96 h-96 bg-blue-600 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-float"></div>
+    <div class="absolute -bottom-8 right-20 w-96 h-96 bg-purple-600 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-float" style="animation-delay: 2s;"></div>
+    <div class="absolute top-1/2 left-1/3 w-72 h-72 bg-cyan-600 rounded-full mix-blend-multiply filter blur-3xl opacity-5 animate-float" style="animation-delay: 4s;"></div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="fixed top-0 w-full z-50 transition-all duration-300 bg-slate-950/80 backdrop-blur-md border-b border-blue-500/30 hover:shadow-lg hover:shadow-blue-500/20" id="navbar">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+      <!-- Logo -->
+      <a href="#home" class="text-3xl font-bold text-gradient hover:scale-110 transition-transform">AN</a>
+      
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex gap-8" id="nav-menu">
+        <a href="#about" class="text-gray-400 hover:text-blue-400 transition-colors relative group">
+          About
+          <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-500 group-hover:w-full transition-all duration-300"></span>
+        </a>
+        <a href="#skills" class="text-gray-400 hover:text-blue-400 transition-colors relative group">
+          Skills
+          <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-500 group-hover:w-full transition-all duration-300"></span>
+        </a>
+        <a href="#projects" class="text-gray-400 hover:text-blue-400 transition-colors relative group">
+          Projects
+          <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-500 group-hover:w-full transition-all duration-300"></span>
+        </a>
+        <a href="#contact" class="text-gray-400 hover:text-blue-400 transition-colors relative group">
+          Contact
+          <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-500 group-hover:w-full transition-all duration-300"></span>
+        </a>
+      </div>
+      
+      <!-- Mobile Menu Button -->
+      <button id="hamburger" class="md:hidden flex flex-col gap-1.5">
+        <span class="w-6 h-0.5 bg-blue-400 rounded transition-all"></span>
+        <span class="w-6 h-0.5 bg-blue-400 rounded transition-all"></span>
+        <span class="w-6 h-0.5 bg-blue-400 rounded transition-all"></span>
+      </button>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div class="hidden md:hidden bg-slate-900/95 backdrop-blur-md border-b border-blue-500/30" id="mobile-menu">
+      <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col gap-4">
+        <a href="#about" class="text-gray-400 hover:text-blue-400 inline-block transition-colors py-2 px-4 hover:bg-blue-500/10 rounded">About</a>
+        <a href="#skills" class="text-gray-400 hover:text-blue-400 inline-block transition-colors py-2 px-4 hover:bg-blue-500/10 rounded">Skills</a>
+        <a href="#projects" class="text-gray-400 hover:text-blue-400 inline-block transition-colors py-2 px-4 hover:bg-blue-500/10 rounded">Projects</a>
+        <a href="#contact" class="text-gray-400 hover:text-blue-400 inline-block transition-colors py-2 px-4 hover:bg-blue-500/10 rounded">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section id="home" class="min-h-screen flex items-center justify-center pt-20 relative overflow-hidden">
+    <div class="max-w-4xl mx-auto text-center px-4 z-10">
+      <h1 class="text-6xl md:text-7xl font-bold mb-6 text-gradient animate-slide-in-down">
+        Abhishek Nirogi
+      </h1>
+      
+      <p class="text-xl md:text-2xl text-blue-300 mb-4 animate-slide-in-up" style="animation-delay: 0.2s;">
+        Full-Stack Developer | React • Vue • Node.js • AI/ML
+      </p>
+      
+      <p class="text-lg md:text-xl text-gray-400 mb-12 animate-slide-in-up" style="animation-delay: 0.4s;">
+        BCA (AI & ML) Student @ Akash Group of Institutions
+      </p>
+      
+      <!-- CTA Buttons -->
+      <div class="flex flex-col sm:flex-row gap-6 justify-center mb-16 animate-slide-in-up" style="animation-delay: 0.6s;">
+        <a href="#projects" class="px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 rounded-full font-bold transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/50 hover-lift">
+          View My Work
+        </a>
+        <a href="#contact" class="px-8 py-4 border-2 border-blue-500 hover:border-blue-400 text-blue-400 hover:text-white rounded-full font-bold transition-all duration-300 hover:scale-105 hover:bg-blue-500/10 hover-lift">
+          Let's Connect
+        </a>
+      </div>
+      
+      <!-- Scroll Indicator -->
+      <div class="text-center scroll-indicator animate-fade-in" style="animation-delay: 0.8s;">
+        <p class="text-gray-400 mb-2">Scroll to explore</p>
+        <p class="text-2xl text-blue-400">↓</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="about" class="py-20 relative">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 text-gradient">About Me</h2>
+      
+      <div class="glass-dark p-8 md:p-12 rounded-2xl hover-lift transition-all duration-300 stagger-item">
+        <p class="text-lg text-gray-300 leading-relaxed mb-6">
+          🚀 Hi, I'm <span class="text-blue-400 font-bold">Abhishek Nirogi</span> — a passionate full-stack developer skilled in <span class="text-blue-300">Python, JavaScript, React, Vue.js, Tailwind CSS, Node.js, and Machine Learning</span>.
+        </p>
+        
+        <p class="text-lg text-gray-300 leading-relaxed mb-6">
+          I specialize in building modern, scalable web applications with beautiful UIs and robust backends. My tech stack includes <span class="text-blue-300">React, Vue.js, Next.js, Tailwind CSS</span> on the frontend, and <span class="text-blue-300">Node.js, Express.js, Django, MongoDB</span> on the backend.
+        </p>
+        
+        <p class="text-lg text-gray-300 leading-relaxed mb-6">
+          Currently pursuing my <span class="text-blue-300 font-bold">BCA degree (AI & ML specialization)</span> at Akash Group of Institutions, Bengaluru. I'm passionate about leveraging AI/ML to solve real-world problems and building intelligent digital solutions.
+        </p>
+        
+        <p class="text-lg text-gray-300 leading-relaxed">
+          🎯 This portfolio itself is built with <span class="text-blue-400 font-bold">HTML5, CSS3, and Vanilla JavaScript</span> to showcase clean code, responsive design, and smooth animations — demonstrating my commitment to quality and attention to detail.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS SECTION -->
+  <section id="skills" class="py-20 relative">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-4xl md:text-5xl font-bold text-center mb-4 text-gradient">Skills & Expertise</h2>
+      <p class="text-center text-gray-400 mb-16">Here's what I can bring to your team</p>
+      
+      <!-- Skill Categories Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        
+        <!-- Frontend -->
+        <div class="stagger-item" style="animation-delay: 0.1s;">
+          <h3 class="text-2xl font-bold text-blue-400 border-l-4 border-blue-500 pl-4 mb-6">🎨 Frontend</h3>
+          <div class="space-y-5">
+            <div class="hover-lift p-4 glass-dark rounded-lg transition-all">
+              <div class="flex justify-between mb-2">
+                <span class="font-semibold text-white">React</span>
+                <span class="text-sm text-blue-400 font-bold">95%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="width: 0%; transition: none;"></div>
+              </div>
+            </div>
+            
+            <div class="hover-lift p-4 glass-dark rounded-lg transition-all">
+              <div class="flex justify-between mb-2">
+                <span class="font-semibold text-white">Vue.js</span>
+                <span class="text-sm text-blue-400 font-bold">85%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="width: 0%; transition: none;"></div>
+              </div>
+            </div>
+            
+            <div class="hover-lift p-4 glass-dark rounded-lg transition-all">
+              <div class="flex justify-between mb-2">
+                <span class="font-semibold text-white">Tailwind CSS</span>
+                <span class="text-sm text-blue-400 font-bold">90%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="width: 0%; transition: none;"></div>
+              </div>
+            </div>
+            
+            <div class="hover-lift p-4 glass-dark rounded-lg transition-all">
+              <div class="flex justify-between mb-2">
+                <span class="font-semibold text-white">Next.js</span>
+                <span class="text-sm text-blue-400 font-bold">85%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="width: 0%; transition: none;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Backend -->
+        <div class="stagger-item" style="animation-delay: 0.2s;">
+          <h3 class="text-2xl font-bold text-blue-400 border-l-4 border-blue-500 pl-4 mb-6">⚙️ Backend</h3>
+          <div class="space-y-5">
+            <div class="hover-lift p-4 glass-dark rounded-lg transition-all">
+              <div class="flex justify-between mb-2">
+                <span class="font-semibold text-white">Node.js</span>
+                <span class="text-sm text-blue-400 font-bold">90%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="width: 0%; transition: none;"></div>
+              </div>
+            </div>
+            
+            <div class="hover-lift p-4 glass-dark rounded-lg transition-all">
+              <div class="flex justify-between mb-2">
+                <span class="font-semibold text-white">Express.js</span>
+                <span class="text-sm text-blue-400 font-bold">88%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="width: 0%; transition: none;"></div>
+              </div>
+            </div>
+            
+            <div class="hover-lift p-4 glass-dark rounded-lg transition-all">
+              <div class="flex justify-between mb-2">
+                <span class="font-semibold text-white">MongoDB</span>
+                <span class="text-sm text-blue-400 font-bold">85%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="width: 0%; transition: none;"></div>
+              </div>
+            </div>
+            
+            <div class="hover-lift p-4 glass-dark rounded-lg transition-all">
+              <div class="flex justify-between mb-2">
+                <span class="font-semibold text-white">Django & Python</span>
+                <span class="text-sm text-blue-400 font-bold">80%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="width: 0%; transition: none;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- DevOps & Cloud -->
+        <div class="stagger-item" style="animation-delay: 0.3s;">
+          <h3 class="text-2xl font-bold text-blue-400 border-l-4 border-blue-500 pl-4 mb-6">☁️ DevOps & Cloud</h3>
+          <div class="space-y-5">
+            <div class="hover-lift p-4 glass-dark rounded-lg transition-all">
+              <div class="flex justify-between mb-2">
+                <span class="font-semibold text-white">Vercel</span>
+                <span class="text-sm text-blue-400 font-bold">95%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="width: 0%; transition: none;"></div>
+              </div>
+            </div>
+            
+            <div class="hover-lift p-4 glass-dark rounded-lg transition-all">
+              <div class="flex justify-between mb-2">
+                <span class="font-semibold text-white">AWS EC2</span>
+                <span class="text-sm text-blue-400 font-bold">80%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="width: 0%; transition: none;"></div>
+              </div>
+            </div>
+            
+            <div class="hover-lift p-4 glass-dark rounded-lg transition-all">
+              <div class="flex justify-between mb-2">
+                <span class="font-semibold text-white">Git & GitHub</span>
+                <span class="text-sm text-blue-400 font-bold">90%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="width: 0%; transition: none;"></div>
+              </div>
+            </div>
+            
+            <div class="hover-lift p-4 glass-dark rounded-lg transition-all">
+              <div class="flex justify-between mb-2">
+                <span class="font-semibold text-white">Linux/Ubuntu</span>
+                <span class="text-sm text-blue-400 font-bold">82%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="width: 0%; transition: none;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Other -->
+        <div class="stagger-item" style="animation-delay: 0.4s;">
+          <h3 class="text-2xl font-bold text-blue-400 border-l-4 border-blue-500 pl-4 mb-6">🚀 Other Skills</h3>
+          <div class="space-y-5">
+            <div class="hover-lift p-4 glass-dark rounded-lg transition-all">
+              <div class="flex justify-between mb-2">
+                <span class="font-semibold text-white">Figma & UI/UX</span>
+                <span class="text-sm text-blue-400 font-bold">85%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="width: 0%; transition: none;"></div>
+              </div>
+            </div>
+            
+            <div class="hover-lift p-4 glass-dark rounded-lg transition-all">
+              <div class="flex justify-between mb-2">
+                <span class="font-semibold text-white">Machine Learning</span>
+                <span class="text-sm text-blue-400 font-bold">78%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="width: 0%; transition: none;"></div>
+              </div>
+            </div>
+            
+            <div class="hover-lift p-4 glass-dark rounded-lg transition-all">
+              <div class="flex justify-between mb-2">
+                <span class="font-semibold text-white">Responsive Design</span>
+                <span class="text-sm text-blue-400 font-bold">95%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="width: 0%; transition: none;"></div>
+              </div>
+            </div>
+            
+            <div class="hover-lift p-4 glass-dark rounded-lg transition-all">
+              <div class="flex justify-between mb-2">
+                <span class="font-semibold text-white">Problem Solving</span>
+                <span class="text-sm text-blue-400 font-bold">92%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="width: 0%; transition: none;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS SECTION -->
+  <section id="projects" class="py-20 relative">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 text-gradient">Featured Projects</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Project 1 -->
+        <div class="glass-dark p-8 rounded-xl hover-lift transition-all stagger-item" style="animation-delay: 0.1s;">
+          <div class="text-4xl mb-4">💰</div>
+          <h3 class="text-xl font-bold text-white mb-3">Personal Finance Tracker</h3>
+          <p class="text-gray-400 mb-4">Track expenses and savings with beautiful charts and responsive design.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-blue-500/20 text-blue-300 text-sm rounded-full border border-blue-500/30">React</span>
+            <span class="px-3 py-1 bg-blue-500/20 text-blue-300 text-sm rounded-full border border-blue-500/30">Charts</span>
+          </div>
+        </div>
+        
+        <!-- Project 2 -->
+        <div class="glass-dark p-8 rounded-xl hover-lift transition-all stagger-item" style="animation-delay: 0.2s;">
+          <div class="text-4xl mb-4">🌤️</div>
+          <h3 class="text-xl font-bold text-white mb-3">Weather Dashboard</h3>
+          <p class="text-gray-400 mb-4">Modern weather app with real-time data, beautiful UI, and smooth animations.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-blue-500/20 text-blue-300 text-sm rounded-full border border-blue-500/30">React</span>
+            <span class="px-3 py-1 bg-blue-500/20 text-blue-300 text-sm rounded-full border border-blue-500/30">API</span>
+          </div>
+        </div>
+        
+        <!-- Project 3 -->
+        <div class="glass-dark p-8 rounded-xl hover-lift transition-all stagger-item" style="animation-delay: 0.3s;">
+          <div class="text-4xl mb-4">🛍️</div>
+          <h3 class="text-xl font-bold text-white mb-3">ShopSmart - eCommerce</h3>
+          <p class="text-gray-400 mb-4">Full-stack eCommerce with product catalog, filtering, and cart functionality.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-blue-500/20 text-blue-300 text-sm rounded-full border border-blue-500/30">React</span>
+            <span class="px-3 py-1 bg-blue-500/20 text-blue-300 text-sm rounded-full border border-blue-500/30">Node.js</span>
+          </div>
+        </div>
+        
+        <!-- Project 4 -->
+        <div class="glass-dark p-8 rounded-xl hover-lift transition-all stagger-item" style="animation-delay: 0.4s;">
+          <div class="text-4xl mb-4">✅</div>
+          <h3 class="text-xl font-bold text-white mb-3">To-Do List App</h3>
+          <p class="text-gray-400 mb-4">Minimalist productivity tool with task management and localStorage persistence.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-blue-500/20 text-blue-300 text-sm rounded-full border border-blue-500/30">React</span>
+            <span class="px-3 py-1 bg-blue-500/20 text-blue-300 text-sm rounded-full border border-blue-500/30">Tailwind</span>
+          </div>
+        </div>
+        
+        <!-- Project 5 -->
+        <div class="glass-dark p-8 rounded-xl hover-lift transition-all stagger-item" style="animation-delay: 0.5s;">
+          <div class="text-4xl mb-4">🤖</div>
+          <h3 class="text-xl font-bold text-white mb-3">AI Chatbot</h3>
+          <p class="text-gray-400 mb-4">Intelligent chatbot powered by machine learning and natural language processing.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-blue-500/20 text-blue-300 text-sm rounded-full border border-blue-500/30">Python</span>
+            <span class="px-3 py-1 bg-blue-500/20 text-blue-300 text-sm rounded-full border border-blue-500/30">ML</span>
+          </div>
+        </div>
+        
+        <!-- Project 6 -->
+        <div class="glass-dark p-8 rounded-xl hover-lift transition-all stagger-item" style="animation-delay: 0.6s;">
+          <div class="text-4xl mb-4">🎯</div>
+          <h3 class="text-xl font-bold text-white mb-3">This Portfolio</h3>
+          <p class="text-gray-400 mb-4">Modern portfolio with HTML5, CSS3, vanilla JavaScript, and Tailwind CSS.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-blue-500/20 text-blue-300 text-sm rounded-full border border-blue-500/30">HTML5</span>
+            <span class="px-3 py-1 bg-blue-500/20 text-blue-300 text-sm rounded-full border border-blue-500/30">CSS3</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="py-20 relative">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 text-gradient">Get In Touch</h2>
+      
+      <div class="glass-dark p-8 md:p-12 rounded-2xl hover-lift transition-all">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+          
+          <!-- Contact Info -->
+          <div class="space-y-6">
+            <div class="hover-lift p-6 glass rounded-xl transition-all">
+              <p class="text-gray-400 text-sm uppercase tracking-wide mb-2">Email</p>
+              <a href="mailto:abhishek27127@gmail.com" class="text-white font-semibold hover:text-blue-400 transition-colors">
+                abhishek27127@gmail.com
+              </a>
+            </div>
+            
+            <div class="hover-lift p-6 glass rounded-xl transition-all">
+              <p class="text-gray-400 text-sm uppercase tracking-wide mb-2">Phone</p>
+              <a href="tel:+919035018208" class="text-white font-semibold hover:text-blue-400 transition-colors">
+                +91 9035018208
+              </a>
+            </div>
+            
+            <div class="hover-lift p-6 glass rounded-xl transition-all">
+              <p class="text-gray-400 text-sm uppercase tracking-wide mb-2">Location</p>
+              <p class="text-white font-semibold">Bengaluru, India</p>
+            </div>
+          </div>
+          
+          <!-- Social Links -->
+          <div class="space-y-6">
+            <div class="hover-lift p-6 glass rounded-xl transition-all">
+              <p class="text-gray-400 text-sm uppercase tracking-wide mb-4">Follow Me</p>
+              <div class="flex gap-4">
+                <a href="https://www.linkedin.com/in/nirogi-abhishek-a80bba299/" target="_blank" class="text-2xl hover:text-blue-400 transition-colors">💼</a>
+                <a href="https://github.com/abhisheknirogi" target="_blank" class="text-2xl hover:text-blue-400 transition-colors">🐙</a>
+                <a href="mailto:abhishek27127@gmail.com" class="text-2xl hover:text-blue-400 transition-colors">📧</a>
+              </div>
+            </div>
+            
+            <div class="glass rounded-xl p-6">
+              <p class="text-gray-300 text-sm">
+                📍 Open to <span class="text-blue-400 font-bold">freelance projects</span> and <span class="text-blue-400 font-bold">full-time opportunities</span>. Let's build something amazing together!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-blue-500/20 py-12 mt-20">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <p class="text-gray-400 mb-4">Built with ❤️ using HTML5, CSS3 & Vanilla JavaScript</p>
+      <p class="text-gray-500 text-sm">© 2025 Abhishek Nirogi | Full-Stack Developer</p>
+      <p class="text-gray-500 text-sm mt-2">BCA (AI & ML) Student | Akash Group of Institutions, Bengaluru</p>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    // Hamburger Menu Toggle
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navLinks = mobileMenu?.querySelectorAll('a') || [];
+
+    if (hamburger) {
+      hamburger.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        const spans = hamburger.querySelectorAll('span');
+        spans[0].style.transform = mobileMenu.classList.contains('hidden') ? 'rotate(0)' : 'rotate(45deg) translateY(8px)';
+        spans[1].style.opacity = mobileMenu.classList.contains('hidden') ? '1' : '0';
+        spans[2].style.transform = mobileMenu.classList.contains('hidden') ? 'rotate(0)' : 'rotate(-45deg) translateY(-8px)';
+      });
+
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+          const spans = hamburger.querySelectorAll('span');
+          spans[0].style.transform = 'rotate(0)';
+          spans[1].style.opacity = '1';
+          spans[2].style.transform = 'rotate(0)';
+        });
+      });
+    }
+
+    // Navbar scroll effect
+    window.addEventListener('scroll', () => {
+      const navbar = document.getElementById('navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('shadow-lg', 'shadow-blue-500/20');
+      } else {
+        navbar.classList.remove('shadow-lg', 'shadow-blue-500/20');
+      }
+    });
+
+    // Animate skill bars on scroll
+    const observerOptions = {
+      threshold: 0.5,
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const skillFills = entry.target.querySelectorAll('.skill-fill');
+          skillFills.forEach((fill) => {
+            const width = fill.nextElementSibling?.textContent || '0%';
+            setTimeout(() => {
+              fill.style.width = width;
+            }, 100);
+          });
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.stagger-item').forEach((item) => {
+      item.style.opacity = '0';
+      item.style.transform = 'translateY(20px)';
+      observer.observe(item);
+    });
+
+    // Smooth scroll behavior
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+
+    // Page load animation
+    window.addEventListener('load', () => {
+      document.querySelectorAll('.animate-slide-in-down, .animate-slide-in-up, .animate-fade-in').forEach((el) => {
+        el.style.opacity = '1';
+        el.style.transform = 'translateY(0)';
+      });
+    });
+  </script>
+</body>
+</html>
