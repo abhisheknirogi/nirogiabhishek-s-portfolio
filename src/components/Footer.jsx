@@ -75,8 +75,8 @@ export default function Footer() {
           transition={{ delay: 0.2 }}
           className="text-center text-gray-500 text-sm"
         >
-          <p>© 2025 Abhishek Nirogi | Built with React, Tailwind CSS & Framer Motion</p>
-          <p className="mt-2">Student Developer at Akash Group of Institutions, Bengaluru</p>
+          <p>© 2026 Abhishek Nirogi | Built with React, Tailwind CSS & Framer Motion</p>
+          
         </motion.div>
       </div>
     </motion.footer>

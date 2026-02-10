@@ -40,11 +40,12 @@ export default function Projects() {
       icon: '🎯',
     },
     {
-      title: 'AI Chatbot',
-      description: 'An intelligent chatbot powered by machine learning algorithms.',
-      tech: ['Python', 'ML', 'NLP'],
-      icon: '🤖',
-    },
+  title: 'Bridal & Beauty Studio',
+  description: 'Premium bridal makeup, hair styling, and skin treatments for your perfect day.',
+  tech: ['Makeup', 'Hair Styling', 'Skin Care'],
+  icon: '💄',
+},
+
   ];
 
   const containerVariants = {
