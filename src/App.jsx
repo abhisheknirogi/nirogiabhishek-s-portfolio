@@ -19,7 +19,7 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-900 text-white overflow-x-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-blue-950 via-slate-950 to-black text-white overflow-x-hidden">
       {/* Animated background elements */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         <motion.div
@@ -28,7 +28,7 @@ function App() {
             x: [0, 20, 0]
           }}
           transition={{ duration: 8, repeat: Infinity }}
-          className="absolute top-0 left-20 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10"
+          className="absolute top-0 left-20 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-15"
         ></motion.div>
         <motion.div
           animate={{ 
@@ -36,7 +36,7 @@ function App() {
             x: [-20, 0, -20]
           }}
           transition={{ duration: 8, repeat: Infinity }}
-          className="absolute -bottom-8 right-20 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10"
+          className="absolute -bottom-8 right-20 w-96 h-96 bg-blue-600 rounded-full mix-blend-multiply filter blur-3xl opacity-10"
         ></motion.div>
       </div>
 

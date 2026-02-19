@@ -4,28 +4,28 @@
 
 :root {
   /* --- Design Tokens: The "Source of Truth" --- */
-  --canvas: #030712;          /* Neutrals are never pure black; they have a hint of blue */
-  --surface: rgba(17, 24, 39, 0.7);
-  --border: rgba(255, 255, 255, 0.06);
+  --canvas: #0a0e27;          /* Deep blue-black background */
+  --surface: rgba(15, 23, 42, 0.8);
+  --border: rgba(59, 130, 246, 0.2);
   
   /* The "Aurora" Accent System */
-  --accent-primary: #6366f1;  /* Indigo 500 */
-  --accent-secondary: #a855f7; /* Purple 500 */
-  --glow-strength: rgba(99, 102, 241, 0.15);
+  --accent-primary: #3b82f6;  /* Blue 500 */
+  --accent-secondary: #0284c7; /* Blue 600 */
+  --glow-strength: rgba(59, 130, 246, 0.15);
 
   /* Typography Hierarchy */
   --text-vibrant: #ffffff;
-  --text-soft: #94a3b8;
-  --text-muted: #64748b;
+  --text-soft: #cbd5e1;
+  --text-muted: #94a3b8;
 }
 
 @layer base {
   body {
-    @apply bg-[var(--canvas)] text-[var(--text-soft)] antialiased selection:bg-indigo-500/30;
+    @apply bg-[var(--canvas)] text-[var(--text-soft)] antialiased selection:bg-blue-500/30;
     /* Creating visual depth with a "Studio Light" background */
     background-image: 
-      radial-gradient(circle at 0% 0%, rgba(99, 102, 241, 0.12) 0%, transparent 40%),
-      radial-gradient(circle at 100% 100%, rgba(168, 85, 247, 0.08) 0%, transparent 40%);
+      radial-gradient(circle at 0% 0%, rgba(59, 130, 246, 0.12) 0%, transparent 40%),
+      radial-gradient(circle at 100% 100%, rgba(2, 132, 199, 0.08) 0%, transparent 40%);
     background-attachment: fixed;
   }
 
@@ -44,8 +44,8 @@
 
   /* --- Advanced Interaction: The "Lift & Glow" --- */
   .hover-premium {
-    @apply hover:-translate-y-2 hover:border-indigo-500/30 hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.7)];
-    background: linear-gradient(135deg, rgba(255,255,255,0.02) 0%, transparent 100%);
+    @apply hover:-translate-y-2 hover:border-blue-500/30 hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.7)];
+    background: linear-gradient(135deg, rgba(59,130,246,0.02) 0%, transparent 100%);
   }
 
   /* --- The "Stripe" Style CTA --- */

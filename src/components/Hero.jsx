@@ -28,12 +28,12 @@ export default function Hero() {
       <motion.div
         animate={{ y: [0, 30, 0] }}
         transition={{ duration: 4, repeat: Infinity }}
-        className="absolute top-20 right-10 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl"
+        className="absolute top-20 right-10 w-72 h-72 bg-blue-500/25 rounded-full blur-3xl"
       ></motion.div>
       <motion.div
         animate={{ y: [30, 0, 30] }}
         transition={{ duration: 5, repeat: Infinity }}
-        className="absolute bottom-20 left-10 w-72 h-72 bg-purple-500/20 rounded-full blur-3xl"
+        className="absolute bottom-20 left-10 w-72 h-72 bg-blue-600/20 rounded-full blur-3xl"
       ></motion.div>
 
       <motion.div
@@ -45,7 +45,7 @@ export default function Hero() {
         {/* Main heading */}
         <motion.h1
           variants={itemVariants}
-          className="text-6xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"
+          className="text-6xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-300 via-blue-500 to-blue-700 bg-clip-text text-transparent"
         >
           Abhishek Nirogi
         </motion.h1>

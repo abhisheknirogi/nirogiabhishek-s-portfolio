@@ -10,14 +10,15 @@ export default {
         primary: {
           50: '#f0f9ff',
           100: '#e0f2fe',
-          500: '#0ea5e9',
-          600: '#0284c7',
-          900: '#0c2340',
+          400: '#60a5fa',
+          500: '#3b82f6',
+          600: '#2563eb',
+          900: '#0c1e3b',
         },
         dark: {
-          bg: '#0a0a12',
-          surface: '#1f1f2e',
-          border: '#2a2a3e',
+          bg: '#0a0e27',
+          surface: '#0f172a',
+          border: '#1e293b',
         },
       },
       animation: {
