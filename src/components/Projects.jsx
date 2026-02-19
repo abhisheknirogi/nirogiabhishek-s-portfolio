@@ -45,7 +45,7 @@ export default function Projects() {
   tech: ['Makeup', 'Hair Styling', 'Skin Care'],
   icon: '💄',
 },
-
+    
   ];
 
   const containerVariants = {
